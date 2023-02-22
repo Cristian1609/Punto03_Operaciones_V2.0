@@ -20,21 +20,21 @@ public class MTC {
         Arrays.sort(num);
         System.out.println(Arrays.toString(num));
 
-        int auxiliarMayor = 1;
-        for (int i = 0; i < num.length; i++) {
-            int contador = 1;
-            for (int j = i + 1; j < num.length; j++) {
-                if (num[j] == num[i]) {
-                    contador++;
-
-                } else {
-                    break;
-                }
-            }
-            if (contador > auxiliarMayor) {
-                auxiliarMayor = contador;
-            }
-        }
+//        int auxiliarMayor = 1;
+//        for (int i = 0; i < num.length; i++) {
+//            int contador = 1;
+//            for (int j = i + 1; j < num.length; j++) {
+//                if (num[j] == num[i]) {
+//                    contador++;
+//
+//                } else {
+//                    break;
+//                }
+//            }
+//            if (contador > auxiliarMayor) {
+//                auxiliarMayor = contador;
+//            }
+//        }
 //CON METODO WHILE
 //        int auxiliarMayor = 1,iterador=0;
 //
@@ -57,24 +57,24 @@ public class MTC {
 //
 //            iterador = j;
 //        }
-//CON WHILE
-//        int auxiliarMayor = 1, iteracion2 = 0;
-//
-//        while (iteracion2 < num.length) {
-//            int contador = 1;
-//            int j = iteracion2 + 1;
-//
-//            while (j < num.length && num[j] == num[iteracion2]) {
-//                contador++;
-//                j++;
-//            }
-//
-//            if (contador > auxiliarMayor) {
-//                auxiliarMayor = contador;
-//            }
-//
-//            iteracion2 = j;
-//        }
+//CON  DO-WHILE
+        int auxiliarMayor = 1, iteracion2 = 0;
+
+        do {
+            int contador = 1;
+            int j = iteracion2 + 1;
+
+            while (j < num.length && num[j] == num[iteracion2]) {
+                contador++;
+                j++;
+            }
+
+            if (contador > auxiliarMayor) {
+                auxiliarMayor = contador;
+            }
+
+            iteracion2 = j;
+        } while (iteracion2 < num.length);
 
         //MODA
         System.out.println("\033[32mSU MODA ES");
